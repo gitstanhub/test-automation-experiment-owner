@@ -13,7 +13,7 @@ import pages.HomePage;
 import pages.mac.MBPCommonLandingPage;
 import pages.mac.buy.model.MBP16BuyPage;
 
-public class addToCartFlowTest {
+public class AddToCartFlowTest {
 
     HomePage homePage = new HomePage();
     NavBar navBar = new NavBar();
@@ -37,7 +37,7 @@ public class addToCartFlowTest {
 
         homePage.open();
 
-        navBar.selectItemFromCategory(categoryLocators.MACBOOK, categoryLocators.MACBOOKPRO);
+        navBar.selectItemFromCategory(categoryLocators.MACBOOK, categoryLocators.MACBOOK_PRO);
         mbpCommonLandingPage.selectMBPModel(mbpLocators.MBP_14_16_INCH);
         bundleSelector.selectScreenSize(mbpConfigLocators.SCREEN_SIZE_16_INCH);
         mbp16BuyPage.selectMBPConfig(mbpConfigLocators.CONFIG_16_INCH_BETTER);
