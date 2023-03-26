@@ -1,39 +1,48 @@
 package apple.onlineshop.sanity.macbook;
 
+import TestData.MBPModelsData;
 import elements.BundleSelector;
 import elements.ConfigSummaryBar;
 import elements.NavBar;
+import elements.SummaryHeader;
+import locators.CategoryLocators;
+import locators.MBPConfigLocators;
+import locators.MBPLocators;
 import org.junit.jupiter.api.Test;
-import browser.PlaywrightBrowserActions;
+import pages.HomePage;
 import pages.mac.MBPCommonLandingPage;
 import pages.mac.buy.model.MBP16BuyPage;
-import pages.mac.buy.model.MBP16ConfiguratorPage;
 
 public class addToCartFlowTest {
 
-    PlaywrightBrowserActions playwrightBrowserActions = new PlaywrightBrowserActions();
+    HomePage homePage = new HomePage();
     NavBar navBar = new NavBar();
     MBPCommonLandingPage mbpCommonLandingPage = new MBPCommonLandingPage();
     BundleSelector bundleSelector = new BundleSelector();
     MBP16BuyPage mbp16BuyPage = new MBP16BuyPage();
-    MBP16ConfiguratorPage mbp16ConfiguratorPage = new MBP16ConfiguratorPage();
     ConfigSummaryBar configSummaryBar = new ConfigSummaryBar();
 
+    CategoryLocators categoryLocators = new CategoryLocators();
+
+    MBPLocators mbpLocators = new MBPLocators();
+
+    MBPConfigLocators mbpConfigLocators = new MBPConfigLocators();
+
+    SummaryHeader summaryHeader = new SummaryHeader();
+
+    MBPModelsData mbpModelsData = new MBPModelsData();
 
     @Test
     public void addMacBookPro() {
-        String url = "https://apple.com/de";
-        String categoryName = "[data-analytics-element-engagement='globalnav hover - mac']";
-        String categoryItem = "[data-analytics-title='macbook pro']";
-        String mbpModel = "[data-analytics-title='buy - 14 and 16 inch macbook pro']";
-        String screenSize = "[data-autom='filterButton-16inch']";
-        String MBPConfig = "[data-autom='proceed-16inch-better']";
 
-        playwrightBrowserActions.navigateTo(url);
-        navBar.selectItemFromCategory(categoryName, categoryItem);
-        mbpCommonLandingPage.selectMBPModel(mbpModel);
-        bundleSelector.selectScreenSize(screenSize);
-        mbp16BuyPage.selectMBPConfig(MBPConfig);
+        homePage.open();
+
+        navBar.selectItemFromCategory(categoryLocators.MACBOOK, categoryLocators.MACBOOKPRO);
+        mbpCommonLandingPage.selectMBPModel(mbpLocators.MBP_14_16_INCH);
+        bundleSelector.selectScreenSize(mbpConfigLocators.SCREEN_SIZE_16_INCH);
+        mbp16BuyPage.selectMBPConfig(mbpConfigLocators.CONFIG_16_INCH_BETTER);
         configSummaryBar.addToCart();
+
+        summaryHeader.verifySelectedModel(mbpModelsData.MBP16_MODEL_DESCRIPTION_DE);
     }
 }
