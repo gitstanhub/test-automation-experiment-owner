@@ -5,7 +5,7 @@ import com.microsoft.playwright.Page;
 
 public class ConfigSummaryBar extends PlaywrightDriverHandler {
 
-    private Page page;
+    private final Page page;
 
     public ConfigSummaryBar() {
         this.page = getPage();

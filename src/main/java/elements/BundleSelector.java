@@ -5,7 +5,7 @@ import com.microsoft.playwright.Page;
 
 public class BundleSelector extends PlaywrightDriverHandler {
 
-    private Page page;
+    private final Page page;
 
     public BundleSelector() {
         this.page = getPage();
