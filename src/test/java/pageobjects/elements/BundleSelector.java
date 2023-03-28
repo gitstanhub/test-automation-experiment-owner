@@ -1,4 +1,5 @@
-package elements;
+package pageobjects.elements;
+
 
 import base.PlaywrightDriverHandler;
 import com.microsoft.playwright.Page;

@@ -1,4 +1,4 @@
-package TestData;
+package testdata;
 
 public class MBPModelsData {
 

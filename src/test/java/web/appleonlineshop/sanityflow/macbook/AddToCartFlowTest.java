@@ -1,4 +1,4 @@
-package apple.onlineshop.sanity.macbook;
+package web.appleonlineshop.sanityflow.macbook;
 
 import base.CartTestBase;
 import org.junit.jupiter.api.Test;
@@ -16,6 +16,6 @@ public class AddToCartFlowTest extends CartTestBase {
         mbp16BuyPage.selectMBPConfig(mbpConfigLocators.CONFIG_16_INCH_BETTER);
         configSummaryBar.addToCart();
 
-        summaryHeader.verifySelectedModel(mbpModelsData.MBP16_MODEL_DESCRIPTION_DE);
+        summaryHeader.verifySelectedModel(applicationConfig.selectedMBPModelDescription());
     }
 }

@@ -1,16 +1,17 @@
 package base;
 
-import TestData.MBPModelsData;
-import elements.BundleSelector;
-import elements.ConfigSummaryBar;
-import elements.NavBar;
-import elements.SummaryHeader;
+import testdata.MBPModelsData;
+import config.ApplicationConfig;
+import pageobjects.elements.BundleSelector;
+import pageobjects.elements.ConfigSummaryBar;
+import pageobjects.elements.NavBar;
+import pageobjects.elements.SummaryHeader;
 import locators.CategoryLocators;
 import locators.MBPConfigLocators;
 import locators.MBPLocators;
-import pages.HomePage;
-import pages.mac.MBPCommonLandingPage;
-import pages.mac.buy.model.MBP16BuyPage;
+import pageobjects.pages.HomePage;
+import pageobjects.pages.mac.MBPCommonLandingPage;
+import pageobjects.pages.mac.buy.model.MBP16BuyPage;
 
 public class CartTestBase {
 
@@ -25,4 +26,5 @@ public class CartTestBase {
     protected MBPConfigLocators mbpConfigLocators = new MBPConfigLocators();
     protected SummaryHeader summaryHeader = new SummaryHeader();
     protected MBPModelsData mbpModelsData = new MBPModelsData();
+    protected ApplicationConfig applicationConfig = new PlaywrightDriverHandler().getApplicationConfig();
 }

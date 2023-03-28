@@ -1,6 +1,6 @@
-package elements;
+package pageobjects.elements;
 
-import assertions.ElementChecks;
+import utils.assertions.ElementChecks;
 import base.PlaywrightDriverHandler;
 import com.microsoft.playwright.Page;
 import locators.SummaryHeaderLocators;

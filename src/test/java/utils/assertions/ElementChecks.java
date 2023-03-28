@@ -1,9 +1,8 @@
-package assertions;
+package utils.assertions;
 
 import base.PlaywrightDriverHandler;
 import com.microsoft.playwright.Locator;
 import com.microsoft.playwright.Page;
-import org.assertj.core.api.Assertions;
 
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
