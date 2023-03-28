@@ -1,4 +1,4 @@
-package pages.mac.buy.model;
+package pageobjects.pages.mac.buy.model;
 
 import base.PlaywrightDriverHandler;
 import com.microsoft.playwright.Page;
