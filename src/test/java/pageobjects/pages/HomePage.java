@@ -1,7 +1,7 @@
-package pages;
+package pageobjects.pages;
 
 import base.PlaywrightDriverHandler;
-import browser.PlaywrightBrowserActions;
+import utils.browseractions.PlaywrightBrowserActions;
 import com.microsoft.playwright.Page;
 
 public class HomePage extends PlaywrightDriverHandler {
@@ -15,7 +15,7 @@ public class HomePage extends PlaywrightDriverHandler {
     }
 
     public void open() {
-        String url = "apple_website_url/de";
+        String url = getApplicationConfig().baseURL() + getApplicationConfig().locale();
 
         playwrightBrowserActions.navigateTo(url);
     }

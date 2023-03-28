@@ -1,4 +1,4 @@
-package pages.mac;
+package pageobjects.pages.mac;
 
 import base.PlaywrightDriverHandler;
 import com.microsoft.playwright.Page;

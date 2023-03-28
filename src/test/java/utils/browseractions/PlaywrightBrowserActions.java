@@ -1,4 +1,4 @@
-package browser;
+package utils.browseractions;
 
 import base.PlaywrightDriverHandler;
 import com.microsoft.playwright.Page;
@@ -14,7 +14,7 @@ public class PlaywrightBrowserActions extends PlaywrightDriverHandler {
     }
 
     public void navigateTo(String url) {
-        log.info("Opening the web page: {}", url);
+//        log.info("Opening the web page: {}", url);
         page.navigate(url);
     }
 }
