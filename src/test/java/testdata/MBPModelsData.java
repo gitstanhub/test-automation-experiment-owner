@@ -1,6 +1,9 @@
 package testdata;
 
-public class MBPModelsData {
+import base.PlaywrightDriverHandler;
+import config.ApplicationConfig;
 
-    public final String MBP16_MODEL_DESCRIPTION_DE = "16\" MacBook Pro – Space Grau";
+public class MBPModelsData {
+    protected ApplicationConfig applicationConfig = PlaywrightDriverHandler.getApplicationConfig();
+    public final String MBP16_MODEL_DESCRIPTION = applicationConfig.selectedMBPModelDescription();
 }
