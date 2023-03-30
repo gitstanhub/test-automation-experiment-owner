@@ -26,5 +26,5 @@ public class CartTestBase {
     protected MBPConfigLocators mbpConfigLocators = new MBPConfigLocators();
     protected SummaryHeader summaryHeader = new SummaryHeader();
     protected MBPModelsData mbpModelsData = new MBPModelsData();
-    protected ApplicationConfig applicationConfig = new PlaywrightDriverHandler().getApplicationConfig();
+
 }

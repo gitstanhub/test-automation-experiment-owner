@@ -16,6 +16,6 @@ public class AddToCartFlowTest extends CartTestBase {
         mbp16BuyPage.selectMBPConfig(mbpConfigLocators.CONFIG_16_INCH_BETTER);
         configSummaryBar.addToCart();
 
-        summaryHeader.verifySelectedModel(applicationConfig.selectedMBPModelDescription());
+        summaryHeader.verifySelectedModel(mbpModelsData.MBP16_MODEL_DESCRIPTION);
     }
 }
