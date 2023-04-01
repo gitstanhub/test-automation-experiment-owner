@@ -11,6 +11,8 @@
 Run locally:
 ```
 gradle clean test -Denv=local -Dcountry=de
+```
+```
 gradle clean test -Denv=local -Dcountry=uk
 ```
 
@@ -18,6 +20,8 @@ Run on a remote machine: &#42;
 
 ```
 gradle clean test -Denv=remote -Dcountry=de
+```
+```
 gradle clean test -Denv=remote -Dcountry=uk
 ```
 
@@ -33,6 +37,8 @@ brew install helm
 3. Add Aerokube charts repository:
 ```
 helm repo add aerokube https://charts.aerokube.com/
+```
+```
 helm repo update
 ```
 
