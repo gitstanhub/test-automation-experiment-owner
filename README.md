@@ -21,7 +21,7 @@ gradle clean test -Denv=remote -Dcountry=de
 gradle clean test -Denv=remote -Dcountry=uk
 ```
 
-&#42; A Moon instance is required for remote run. You can roll out new localhost Moon instance on MacOS:
+&#42; A Moon instance is required for remote run. You can create new localhost Moon pod on MacOS:
 
 1. Launch Docker Desktop and enable Kubernetes in the settings.
 
