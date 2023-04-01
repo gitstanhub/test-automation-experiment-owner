@@ -1,5 +1,7 @@
 # Experimental project with UI autotests configured by "Owner" library
-## Stack:  - Playwright (Java)
+
+## Stack: 
+- Playwright (Java)
 - Gradle
 - JUnit5
 - Owner
@@ -25,21 +27,21 @@ gradle clean test -Denv=remote -Dcountry=uk
 
 2. Install Helm:
 ```
-$ brew install helm
+brew install helm
 ```
 
 3. Add Aerokube charts repository:
 ```
-$ helm repo add aerokube https://charts.aerokube.com/
-$ helm repo update
+helm repo add aerokube https://charts.aerokube.com/
+helm repo update
 ```
 
 4. Create a Namespace:
 ```
-$ kubectl create namespace moon
+kubectl create namespace moon
 ```
 
 5. Install a Moon type:
 ```
-$ helm install moon aerokube/moon --namespace
+helm install moon aerokube/moon --namespace
 ```
