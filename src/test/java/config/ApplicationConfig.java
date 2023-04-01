@@ -28,9 +28,9 @@ public interface ApplicationConfig extends Config {
     @Key("baseURL")
     String baseURL();
 
-    @Key("${locale}.locale")
-    String locale();
+    @Key("${country}.country")
+    String country();
 
-    @Key("${locale}.selectedMBPModelDescription")
+    @Key("${country}.selectedMBPModelDescription")
     String selectedMBPModelDescription();
 }
