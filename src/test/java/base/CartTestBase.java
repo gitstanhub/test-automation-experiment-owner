@@ -1,7 +1,6 @@
 package base;
 
 import testdata.MBPModelsData;
-import config.ApplicationConfig;
 import pageobjects.elements.BundleSelector;
 import pageobjects.elements.ConfigSummaryBar;
 import pageobjects.elements.NavBar;
