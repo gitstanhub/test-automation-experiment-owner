@@ -1,7 +1,5 @@
 # Experimental project with UI autotests configured by "Owner" library
-
-## Stack:
-- Playwright (Java)
+## Stack:  - Playwright (Java)
 - Gradle
 - JUnit5
 - Owner
