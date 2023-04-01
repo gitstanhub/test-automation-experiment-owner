@@ -3,7 +3,7 @@
 ## Stack: 
 - Playwright (Java)
 - Gradle
-- JUnit5
+- JUnit 5
 - Owner
 - Docker
 - Kubernetes
