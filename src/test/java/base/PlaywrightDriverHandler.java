@@ -1,12 +1,11 @@
 package base;
 
-import config.BrowserName;
 import com.microsoft.playwright.*;
 import config.ApplicationConfig;
+import config.BrowserName;
 import config.ConfigReader;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
-
 
 public class PlaywrightDriverHandler {
 
@@ -22,9 +21,9 @@ public class PlaywrightDriverHandler {
 
         switch (String.valueOf(applicationConfig.isRemote())) {
             case "false":
-                if (applicationConfig.browserName().toString().equals(BrowserName.Chromium.toString())) {
+                if (applicationConfig.browserName().toString().equals(BrowserName.chromium.toString())) {
                     browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(false));
-                } else if (applicationConfig.browserName().toString().equals(BrowserName.Firefox.toString())) {
+                } else if (applicationConfig.browserName().toString().equals(BrowserName.firefox.toString())) {
                     browser = playwright.firefox().launch(new BrowserType.LaunchOptions().setHeadless(false));
                 } else {
                     throw new IllegalArgumentException("Unknown browser");
@@ -32,10 +31,10 @@ public class PlaywrightDriverHandler {
                 break;
 
             case "true":
-                String moonWebSocketURL = "ws://localhost:4444/playwright/chromium";
-                if (applicationConfig.browserName().toString().equals(BrowserName.Chromium.toString())) {
+                String moonWebSocketURL = applicationConfig.remoteURL() + applicationConfig.browserName();
+                if (applicationConfig.browserName().toString().equals(BrowserName.chromium.toString())) {
                     browser = playwright.chromium().connect(moonWebSocketURL);
-                } else if (applicationConfig.browserName().toString().equals(BrowserName.Firefox.toString())) {
+                } else if (applicationConfig.browserName().toString().equals(BrowserName.firefox.toString())) {
                     browser = playwright.chromium().connect(moonWebSocketURL);
                 } else {
                     throw new IllegalArgumentException("Unknown browser");

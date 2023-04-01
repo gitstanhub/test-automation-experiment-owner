@@ -15,7 +15,7 @@ public class HomePage extends PlaywrightDriverHandler {
     }
 
     public void open() {
-        String url = getApplicationConfig().baseURL() + getApplicationConfig().locale();
+        String url = getApplicationConfig().baseURL() + getApplicationConfig().country();
 
         playwrightBrowserActions.navigateTo(url);
     }
