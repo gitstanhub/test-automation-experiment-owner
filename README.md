@@ -27,11 +27,11 @@ gradle clean test -Denv=remote -Dcountry=uk
 
 &#42; A Moon server is required for remote run. Follow these steps to create new Moon server on localhost:
 
-1. Install Docker
+1. Install Docker:
  - macOS/Windows: Download and install Docker Desktop from https://www.docker.com/products/docker-desktop
  - Linux: Follow the installation guide for your distribution from https://docs.docker.com/engine/install/
    
-2. Enable Kubernetes
+2. Enable Kubernetes:
 
 For macOS/Windows:
 - Open Docker Desktop preferences/settings
